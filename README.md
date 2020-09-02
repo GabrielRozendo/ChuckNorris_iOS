@@ -8,6 +8,6 @@ The problem to solve is in [challenge.md](challenge/challenge.md)
 
 ## TODO
 
-[ ] List all the tasks
-[ ] Create the solution in iOS Swift
-[ ] Write here the solution approach
+- [ ] List all the tasks in projects
+- [ ] Create the solution for iOS Swift
+- [ ] Write here the solution approach
