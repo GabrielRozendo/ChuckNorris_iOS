@@ -1,0 +1,30 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '13.0'
+
+def tests_pods
+  pod 'Quick'
+  pod 'Nimble'
+  pod 'iOSSnapshotTestCase'
+end
+
+target 'ChuckNorrisFacts' do
+  use_frameworks! :linkage => :static
+
+  # Pods for ChuckNorrisFacts
+  pod 'SwiftLint'
+  pod 'RxSwift', '~> 5'
+
+  target 'ChuckNorrisFactsTests' do
+    inherit! :search_paths
+
+    use_frameworks! :linkage => :static
+    tests_pods
+  end
+
+  target 'ChuckNorrisFactsUITests' do
+    # Pods for testing
+    use_frameworks! :linkage => :static
+    tests_pods
+  end
+
+end
