@@ -55,6 +55,17 @@
 		869C976C251BF00600F15E58 /* FactsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869C976B251BF00600F15E58 /* FactsRepository.swift */; };
 		869C976E251BF0C300F15E58 /* FactsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869C976D251BF0C300F15E58 /* FactsRequest.swift */; };
 		869C9770251BF11200F15E58 /* FactsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869C976F251BF11200F15E58 /* FactsService.swift */; };
+		869C9774251C04CB00F15E58 /* SearchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869C9773251C04CB00F15E58 /* SearchCoordinator.swift */; };
+		869C9776251C052900F15E58 /* PastSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869C9775251C052900F15E58 /* PastSearch.swift */; };
+		869C9778251C054100F15E58 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869C9777251C054100F15E58 /* SearchResult.swift */; };
+		869C977A251C05BD00F15E58 /* CategoryCollectionItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869C9779251C05BD00F15E58 /* CategoryCollectionItemViewCell.swift */; };
+		869C977C251C060B00F15E58 /* CategoryCollectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869C977B251C060B00F15E58 /* CategoryCollectionDelegate.swift */; };
+		869C977F251C068000F15E58 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869C977E251C068000F15E58 /* SearchViewController.swift */; };
+		869C9781251C071100F15E58 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869C9780251C071100F15E58 /* SearchViewModel.swift */; };
+		869C9783251C0C6600F15E58 /* SearchCoordinatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869C9782251C0C6600F15E58 /* SearchCoordinatorSpec.swift */; };
+		869C9786251C0CEF00F15E58 /* SearchViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869C9785251C0CEF00F15E58 /* SearchViewModelSpec.swift */; };
+		869C9788251C0D0700F15E58 /* SearchViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869C9787251C0D0700F15E58 /* SearchViewControllerSpec.swift */; };
+		869C978A251C0D5100F15E58 /* HomeViewControllerSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869C9789251C0D5100F15E58 /* HomeViewControllerSnapshot.swift */; };
 		D5EEB6D39571E9B531645568 /* Pods_ChuckNorrisFacts_ChuckNorrisFactsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6260C62420527B0E7203BB02 /* Pods_ChuckNorrisFacts_ChuckNorrisFactsUITests.framework */; };
 		F360549C82564745D2224AAA /* Pods_ChuckNorrisFactsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C8ABA44402AD08096A52A54 /* Pods_ChuckNorrisFactsTests.framework */; };
 /* End PBXBuildFile section */
@@ -137,6 +148,17 @@
 		869C976B251BF00600F15E58 /* FactsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsRepository.swift; sourceTree = "<group>"; };
 		869C976D251BF0C300F15E58 /* FactsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsRequest.swift; sourceTree = "<group>"; };
 		869C976F251BF11200F15E58 /* FactsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsService.swift; sourceTree = "<group>"; };
+		869C9773251C04CB00F15E58 /* SearchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCoordinator.swift; sourceTree = "<group>"; };
+		869C9775251C052900F15E58 /* PastSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastSearch.swift; sourceTree = "<group>"; };
+		869C9777251C054100F15E58 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
+		869C9779251C05BD00F15E58 /* CategoryCollectionItemViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionItemViewCell.swift; sourceTree = "<group>"; };
+		869C977B251C060B00F15E58 /* CategoryCollectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionDelegate.swift; sourceTree = "<group>"; };
+		869C977E251C068000F15E58 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		869C9780251C071100F15E58 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		869C9782251C0C6600F15E58 /* SearchCoordinatorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCoordinatorSpec.swift; sourceTree = "<group>"; };
+		869C9785251C0CEF00F15E58 /* SearchViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModelSpec.swift; sourceTree = "<group>"; };
+		869C9787251C0D0700F15E58 /* SearchViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewControllerSpec.swift; sourceTree = "<group>"; };
+		869C9789251C0D5100F15E58 /* HomeViewControllerSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerSnapshot.swift; sourceTree = "<group>"; };
 		8B3D683791F36A6F1BDD6CAE /* Pods-ChuckNorrisFacts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChuckNorrisFacts.debug.xcconfig"; path = "Target Support Files/Pods-ChuckNorrisFacts/Pods-ChuckNorrisFacts.debug.xcconfig"; sourceTree = "<group>"; };
 		8C8ABA44402AD08096A52A54 /* Pods_ChuckNorrisFactsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChuckNorrisFactsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C989DBF3D7814C08722CACE4 /* Pods-ChuckNorrisFactsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChuckNorrisFactsTests.release.xcconfig"; path = "Target Support Files/Pods-ChuckNorrisFactsTests/Pods-ChuckNorrisFactsTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -222,9 +244,10 @@
 		860FC6A6251AF48700D7446E /* ChuckNorrisFactsTests */ = {
 			isa = PBXGroup;
 			children = (
-				869C975D251BEA1E00F15E58 /* Coordinator */,
 				860FC731251B045000D7446E /* Repositories */,
+				869C975D251BEA1E00F15E58 /* Coordinator */,
 				869C9765251BEB7C00F15E58 /* Home */,
+				869C9784251C0CA900F15E58 /* Search */,
 				860FC6A9251AF48700D7446E /* Info.plist */,
 			);
 			path = ChuckNorrisFactsTests;
@@ -304,8 +327,8 @@
 		860FC70C251AF9D100D7446E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				860FC71F251B001000D7446E /* UIColor+Extension.swift */,
 				860FC762251B135400D7446E /* String+Extension.swift */,
+				860FC71F251B001000D7446E /* UIColor+Extension.swift */,
 				860FC76C251B142600D7446E /* UIFont+Extension.swift */,
 				860FC76E251B144200D7446E /* UIView+Extension.swift */,
 				860FC773251B14AD00D7446E /* UILabel+Extension.swift */,
@@ -318,6 +341,7 @@
 			isa = PBXGroup;
 			children = (
 				860FC77C251B18A700D7446E /* Home */,
+				869C977D251C066800F15E58 /* Search */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -327,6 +351,7 @@
 			children = (
 				860FC710251AFB0F00D7446E /* AppCoordinator.swift */,
 				860FC77A251B187100D7446E /* HomeCoordinator.swift */,
+				869C9773251C04CB00F15E58 /* SearchCoordinator.swift */,
 			);
 			name = Coordinator;
 			path = "Supporting Files/Coordinator";
@@ -402,6 +427,8 @@
 			children = (
 				860FC75E251B12AC00D7446E /* Fact.swift */,
 				860FC760251B12EA00D7446E /* FactCategory.swift */,
+				869C9777251C054100F15E58 /* SearchResult.swift */,
+				869C9775251C052900F15E58 /* PastSearch.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -410,6 +437,8 @@
 			isa = PBXGroup;
 			children = (
 				860FC765251B138E00D7446E /* FactTableViewCell.swift */,
+				869C9779251C05BD00F15E58 /* CategoryCollectionItemViewCell.swift */,
+				869C977B251C060B00F15E58 /* CategoryCollectionDelegate.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -446,6 +475,7 @@
 			children = (
 				869C975E251BEA3400F15E58 /* AppCoordinatorSpec.swift */,
 				869C9760251BEA5F00F15E58 /* HomeCoordinatorSpec.swift */,
+				869C9782251C0C6600F15E58 /* SearchCoordinatorSpec.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -455,6 +485,7 @@
 			children = (
 				869C9766251BEB9900F15E58 /* HomeViewModelSpec.swift */,
 				869C9768251BEBD700F15E58 /* HomeViewControllerSpec.swift */,
+				869C9789251C0D5100F15E58 /* HomeViewControllerSnapshot.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -467,6 +498,24 @@
 				869C976F251BF11200F15E58 /* FactsService.swift */,
 			);
 			path = Facts;
+			sourceTree = "<group>";
+		};
+		869C977D251C066800F15E58 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				869C9780251C071100F15E58 /* SearchViewModel.swift */,
+				869C977E251C068000F15E58 /* SearchViewController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		869C9784251C0CA900F15E58 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				869C9785251C0CEF00F15E58 /* SearchViewModelSpec.swift */,
+				869C9787251C0D0700F15E58 /* SearchViewControllerSpec.swift */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 		F3B564B8017EFD1436F4A30D /* Pods */ = {
@@ -714,10 +763,13 @@
 				860FC72A251B03A600D7446E /* NetworkUtils.swift in Sources */,
 				869C975A251BE0A000F15E58 /* StatusView.swift in Sources */,
 				860FC766251B138E00D7446E /* FactTableViewCell.swift in Sources */,
+				869C9781251C071100F15E58 /* SearchViewModel.swift in Sources */,
 				860FC77E251B18B900D7446E /* HomeViewModel.swift in Sources */,
 				869C976C251BF00600F15E58 /* FactsRepository.swift in Sources */,
 				860FC778251B156300D7446E /* UIImage+Extension.swift in Sources */,
+				869C977C251C060B00F15E58 /* CategoryCollectionDelegate.swift in Sources */,
 				860FC774251B14AD00D7446E /* UILabel+Extension.swift in Sources */,
+				869C9774251C04CB00F15E58 /* SearchCoordinator.swift in Sources */,
 				860FC72E251B03FD00D7446E /* NetworkManager.swift in Sources */,
 				860FC77B251B187100D7446E /* HomeCoordinator.swift in Sources */,
 				860FC728251B035A00D7446E /* Reachbility.swift in Sources */,
@@ -731,10 +783,14 @@
 				860FC72C251B03CF00D7446E /* NetworkError.swift in Sources */,
 				860FC761251B12EA00D7446E /* FactCategory.swift in Sources */,
 				860FC75F251B12AC00D7446E /* Fact.swift in Sources */,
+				869C9778251C054100F15E58 /* SearchResult.swift in Sources */,
 				860FC76F251B144200D7446E /* UIView+Extension.swift in Sources */,
 				860FC772251B148100D7446E /* CategoryView.swift in Sources */,
 				860FC76B251B13FB00D7446E /* AppTextStyle.swift in Sources */,
+				869C9776251C052900F15E58 /* PastSearch.swift in Sources */,
+				869C977A251C05BD00F15E58 /* CategoryCollectionItemViewCell.swift in Sources */,
 				860FC769251B13E500D7446E /* AppMetrics.swift in Sources */,
+				869C977F251C068000F15E58 /* SearchViewController.swift in Sources */,
 				869C976E251BF0C300F15E58 /* FactsRequest.swift in Sources */,
 				860FC68E251AF48600D7446E /* AppDelegate.swift in Sources */,
 				869C9770251BF11200F15E58 /* FactsService.swift in Sources */,
@@ -749,12 +805,16 @@
 			files = (
 				869C975F251BEA3400F15E58 /* AppCoordinatorSpec.swift in Sources */,
 				860FC741251B07AA00D7446E /* RequestSpec.swift in Sources */,
+				869C978A251C0D5100F15E58 /* HomeViewControllerSnapshot.swift in Sources */,
+				869C9788251C0D0700F15E58 /* SearchViewControllerSpec.swift in Sources */,
 				860FC736251B063000D7446E /* RequestParamsSpec.swift in Sources */,
 				869C9769251BEBD700F15E58 /* HomeViewControllerSpec.swift in Sources */,
 				860FC734251B046400D7446E /* NetworkSpec.swift in Sources */,
+				869C9786251C0CEF00F15E58 /* SearchViewModelSpec.swift in Sources */,
 				869C9761251BEA5F00F15E58 /* HomeCoordinatorSpec.swift in Sources */,
 				860FC73F251B071400D7446E /* RequestHeaderSpec.swift in Sources */,
 				869C9767251BEB9900F15E58 /* HomeViewModelSpec.swift in Sources */,
+				869C9783251C0C6600F15E58 /* SearchCoordinatorSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
