@@ -8,21 +8,61 @@
 
 import UIKit
 
+// MARK: - PROTOCOL
+
 protocol Coordinator {
     func start()
 }
 
-final class AppCoordinator {
+// MARK: - CLASS
+
+class AppCoordinator {
     // MARK: - PRIVATE PROPERTIES
 
     private let window: UIWindow
+    private let navigationController: UINavigationController
+    private let homeCoordinator: HomeCoordinator
+
     init(window: UIWindow) {
         self.window = window
+        navigationController = UINavigationController()
+
+        homeCoordinator = HomeCoordinator(presenter: navigationController)
+
+        setupNavigationController()
+        window.rootViewController = navigationController
+    }
+
+    // MARK: - PRIVATE METHODS
+
+    private func setupNavigationController() {
+        navigationController.view.backgroundColor = .white
+
+        let normalAttributes: [NSAttributedString.Key: Any] =
+            [NSAttributedString.Key.font: AppTextStyle.title(fontSize: 16).font,
+             NSAttributedString.Key.foregroundColor: UIColor.flame]
+
+        let largeAttributes: [NSAttributedString.Key: Any] =
+            [NSAttributedString.Key.font: AppTextStyle.title(fontSize: 20).font,
+             NSAttributedString.Key.foregroundColor: UIColor.flame]
+
+        let navBarAppearance = UINavigationBarAppearance()
+        navBarAppearance.configureWithOpaqueBackground()
+        navBarAppearance.titleTextAttributes = normalAttributes
+        navBarAppearance.largeTitleTextAttributes = largeAttributes
+        navBarAppearance.backgroundColor = .white
+        navigationController.navigationBar.standardAppearance = navBarAppearance
+        navigationController.navigationBar.scrollEdgeAppearance = navBarAppearance
+
+        navigationController.navigationBar.tintColor = .flame
     }
 }
 
 // MARK: - EXTENSIONS
 
 extension AppCoordinator: Coordinator {
-    func start() {}
+    func start() {
+        homeCoordinator.start()
+        window.makeKeyAndVisible()
+    }
 }
