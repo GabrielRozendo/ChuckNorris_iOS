@@ -21,6 +21,8 @@
 		860FC719251AFBC600D7446E /* AccessibilityLabelLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 860FC71B251AFBC600D7446E /* AccessibilityLabelLocalizable.strings */; };
 		860FC71E251AFFBF00D7446E /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 860FC71D251AFFBF00D7446E /* Colors.xcassets */; };
 		860FC720251B001000D7446E /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860FC71F251B001000D7446E /* UIColor+Extension.swift */; };
+		860FC724251B009A00D7446E /* courier-new.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 860FC722251B009A00D7446E /* courier-new.ttf */; };
+		860FC725251B009A00D7446E /* 04b_30.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 860FC723251B009A00D7446E /* 04b_30.ttf */; };
 		D5EEB6D39571E9B531645568 /* Pods_ChuckNorrisFacts_ChuckNorrisFactsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6260C62420527B0E7203BB02 /* Pods_ChuckNorrisFacts_ChuckNorrisFactsUITests.framework */; };
 		F360549C82564745D2224AAA /* Pods_ChuckNorrisFactsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C8ABA44402AD08096A52A54 /* Pods_ChuckNorrisFactsTests.framework */; };
 /* End PBXBuildFile section */
@@ -69,6 +71,8 @@
 		860FC71C251AFBC900D7446E /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/AccessibilityLabelLocalizable.strings"; sourceTree = "<group>"; };
 		860FC71D251AFFBF00D7446E /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		860FC71F251B001000D7446E /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		860FC722251B009A00D7446E /* courier-new.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "courier-new.ttf"; sourceTree = "<group>"; };
+		860FC723251B009A00D7446E /* 04b_30.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 04b_30.ttf; sourceTree = "<group>"; };
 		8B3D683791F36A6F1BDD6CAE /* Pods-ChuckNorrisFacts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChuckNorrisFacts.debug.xcconfig"; path = "Target Support Files/Pods-ChuckNorrisFacts/Pods-ChuckNorrisFacts.debug.xcconfig"; sourceTree = "<group>"; };
 		8C8ABA44402AD08096A52A54 /* Pods_ChuckNorrisFactsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChuckNorrisFactsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C989DBF3D7814C08722CACE4 /* Pods-ChuckNorrisFactsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChuckNorrisFactsTests.release.xcconfig"; path = "Target Support Files/Pods-ChuckNorrisFactsTests/Pods-ChuckNorrisFactsTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -202,6 +206,7 @@
 		860FC708251AF9A400D7446E /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				860FC721251B006B00D7446E /* Fonts */,
 				860FC699251AF48700D7446E /* Assets.xcassets */,
 				860FC71D251AFFBF00D7446E /* Colors.xcassets */,
 			);
@@ -261,6 +266,15 @@
 			);
 			name = Coordinator;
 			path = "Supporting Files/Coordinator";
+			sourceTree = "<group>";
+		};
+		860FC721251B006B00D7446E /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				860FC723251B009A00D7446E /* 04b_30.ttf */,
+				860FC722251B009A00D7446E /* courier-new.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		F3B564B8017EFD1436F4A30D /* Pods */ = {
@@ -385,7 +399,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				860FC725251B009A00D7446E /* 04b_30.ttf in Resources */,
 				860FC71E251AFFBF00D7446E /* Colors.xcassets in Resources */,
+				860FC724251B009A00D7446E /* courier-new.ttf in Resources */,
 				860FC69D251AF48700D7446E /* LaunchScreen.storyboard in Resources */,
 				860FC715251AFBBF00D7446E /* Localizable.strings in Resources */,
 				860FC69A251AF48700D7446E /* Assets.xcassets in Resources */,
