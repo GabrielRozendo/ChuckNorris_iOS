@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -282,7 +282,6 @@
 				860FC687251AF48600D7446E /* Frameworks */,
 				860FC688251AF48600D7446E /* Resources */,
 				860FC6FF251AF72A00D7446E /* SwiftLint */,
-				9AB0A84D920D51A72E02C3F8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -320,7 +319,6 @@
 				860FC6AA251AF48700D7446E /* Sources */,
 				860FC6AB251AF48700D7446E /* Frameworks */,
 				860FC6AC251AF48700D7446E /* Resources */,
-				A7CCAB8099EEC118208F6331 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -445,23 +443,6 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
-		9AB0A84D920D51A72E02C3F8 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ChuckNorrisFacts/Pods-ChuckNorrisFacts-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ChuckNorrisFacts/Pods-ChuckNorrisFacts-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ChuckNorrisFacts/Pods-ChuckNorrisFacts-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		A4BA295201134111B187C638 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -482,23 +463,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A7CCAB8099EEC118208F6331 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ChuckNorrisFacts-ChuckNorrisFactsUITests/Pods-ChuckNorrisFacts-ChuckNorrisFactsUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ChuckNorrisFacts-ChuckNorrisFactsUITests/Pods-ChuckNorrisFacts-ChuckNorrisFactsUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ChuckNorrisFacts-ChuckNorrisFactsUITests/Pods-ChuckNorrisFacts-ChuckNorrisFactsUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E01A23849E5551D13E6F31ED /* [CP] Check Pods Manifest.lock */ = {
@@ -721,6 +685,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8B3D683791F36A6F1BDD6CAE /* Pods-ChuckNorrisFacts.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZUDACG4ZT4;
@@ -741,6 +706,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = ED76B43F3C55F7B1B4AE2E0F /* Pods-ChuckNorrisFacts.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZUDACG4ZT4;
@@ -761,7 +727,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EB56DA2AF29D0936CBF181E4 /* Pods-ChuckNorrisFactsTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZUDACG4ZT4;
@@ -784,7 +750,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C989DBF3D7814C08722CACE4 /* Pods-ChuckNorrisFactsTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZUDACG4ZT4;
@@ -807,7 +773,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2CE2BF450982869ADE3A3170 /* Pods-ChuckNorrisFacts-ChuckNorrisFactsUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZUDACG4ZT4;
 				INFOPLIST_FILE = ChuckNorrisFactsUITests/Info.plist;
@@ -828,7 +794,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E3BAA67017D0A6DDF261BE8A /* Pods-ChuckNorrisFacts-ChuckNorrisFactsUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZUDACG4ZT4;
 				INFOPLIST_FILE = ChuckNorrisFactsUITests/Info.plist;
