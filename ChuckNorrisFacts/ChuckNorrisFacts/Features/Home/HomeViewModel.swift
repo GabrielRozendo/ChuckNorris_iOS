@@ -20,6 +20,8 @@ protocol HomeViewModelProtocol {
     var isDirty: Bool { get }
 
     func didLoad()
+    func goToSearch(with term: String)
+    func goToCategory(with category: FactCategory?)
 }
 
 // MARK: - CLASS
@@ -52,4 +54,8 @@ extension HomeViewModel: HomeViewModelProtocol {
     func didLoad() {
         loadingObservable.onNext(false)
     }
+
+    func goToSearch(with term: String) {}
+
+    func goToCategory(with category: FactCategory?) {}
 }

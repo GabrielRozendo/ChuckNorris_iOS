@@ -15,11 +15,14 @@ class HomeCoordinator {
     private let presenter: UINavigationController
     private var homeVC: HomeViewController?
     private var homeVM: HomeViewModel?
+    private var searchCoordinator: SearchCoordinator?
 
     // MARK: - INIT
 
-    init(presenter: UINavigationController) {
+    init(presenter: UINavigationController, homeVM: HomeViewModel? = nil, homeVC: HomeViewController? = nil) {
         self.presenter = presenter
+        self.homeVM = homeVM
+        self.homeVC = homeVC
     }
 
     // MARK: - PRIVATE METHODS
@@ -40,13 +43,13 @@ class HomeCoordinator {
     }
 }
 
-// MARK: - EXTENSIONS
+// MARK: - EXTENSION COORDINATOR
 
 extension HomeCoordinator: Coordinator {
     func start() {
-        let homeVM = HomeViewModel()
+        let homeVM = self.homeVM ?? HomeViewModel()
         self.homeVM = homeVM
-        let homeVC = HomeViewController(with: homeVM)
+        let homeVC = self.homeVC ?? HomeViewController(with: homeVM)
         homeVC.delegate = self
 
         preparation(with: homeVC)
@@ -56,8 +59,22 @@ extension HomeCoordinator: Coordinator {
     }
 }
 
-// MARK: - DELEGATES
+// MARK: - EXTENSION DELEGATES
 
 extension HomeCoordinator: HomeViewControllerDelegate {
-    func goToSearch() {}
+    func goToSearch() {
+        searchCoordinator = SearchCoordinator(presenter: presenter, categories: [], pastSearches: [])
+        searchCoordinator?.delegate = self
+        searchCoordinator?.start()
+    }
+}
+
+extension HomeCoordinator: SearchCoordinatorDelegate {
+    func goToSearch(with term: String) {
+        homeVM?.goToSearch(with: term)
+    }
+
+    func goToCategory(with category: FactCategory) {
+        homeVM?.goToCategory(with: category)
+    }
 }
