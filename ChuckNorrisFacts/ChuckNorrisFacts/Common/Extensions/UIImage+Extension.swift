@@ -21,3 +21,27 @@ extension UIImage {
         return UIImage(systemName: "link", withConfiguration: largeConfig) ?? UIImage()
     }
 }
+
+// MARK: - STATUS
+
+extension UIImage {
+    class var error: UIImage {
+        return UIImage(named: "icons8-error-64") ?? UIImage()
+    }
+
+    class var unavailable: UIImage {
+        return UIImage(named: "icons8-unavailable") ?? UIImage()
+    }
+
+    class var noInternet: UIImage {
+        return UIImage(named: "icons8-wi-fi-off-64") ?? UIImage()
+    }
+
+    class var loading: UIImage {
+        return UIImage(named: "icons8-sand-watch-64") ?? UIImage()
+    }
+
+    class var emptyState: UIImage {
+        return UIImage(systemName: "doc.text.magnifyingglass") ?? UIImage()
+    }
+}
