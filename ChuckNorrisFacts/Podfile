@@ -6,6 +6,7 @@ target 'ChuckNorrisFacts' do
   use_frameworks!
 
   # Pods for ChuckNorrisFacts
+  pod 'SwiftLint'
 
   target 'ChuckNorrisFactsTests' do
     inherit! :search_paths
