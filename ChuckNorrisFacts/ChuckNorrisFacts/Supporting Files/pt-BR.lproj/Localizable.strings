@@ -5,3 +5,9 @@
   Created by Gabriel Oliveira Rozendo on 23/09/20.
   Copyright © 2020 Gabriel Oliveira Rozendo. All rights reserved.
 */
+"home title" = "Piadas de Chuck Norris";
+"status loading" = "Carregando";
+"status no results" = "Nenhum resultado";
+"status no internet" = "Verifique sua internet e tente novamente";
+"status generic error" = "Ops, um erro aconteceu aqui";
+"status empty state" = "Vá em buscar para ver os resultados aqui";

@@ -6,6 +6,9 @@
   Copyright © 2020 Gabriel Oliveira Rozendo. All rights reserved.
 */
 "Category" = "Category";
+"StatusImage" = "Status image";
+"StatusLabel" = "Status text";
 "Fact" = "Fact";
 "Share" = "Share";
 "Link" = "Open site";
+"HomeTableView" = "Facts list";

@@ -5,3 +5,9 @@
   Created by Gabriel Oliveira Rozendo on 23/09/20.
   Copyright © 2020 Gabriel Oliveira Rozendo. All rights reserved.
 */
+"home title" = "Chuck Norris Fun Facts";
+"status loading" = "Loading";
+"status no results" = "No results to show";
+"status no internet" = "Check your internet and try again";
+"status generic error" = "Ops, an error here!\nSorry about that...";
+"status empty state" = "Go to search to see the results here!";
