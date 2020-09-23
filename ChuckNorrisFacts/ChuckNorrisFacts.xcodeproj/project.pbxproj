@@ -19,6 +19,8 @@
 		860FC711251AFB0F00D7446E /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860FC710251AFB0F00D7446E /* AppCoordinator.swift */; };
 		860FC715251AFBBF00D7446E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 860FC717251AFBBF00D7446E /* Localizable.strings */; };
 		860FC719251AFBC600D7446E /* AccessibilityLabelLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 860FC71B251AFBC600D7446E /* AccessibilityLabelLocalizable.strings */; };
+		860FC71E251AFFBF00D7446E /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 860FC71D251AFFBF00D7446E /* Colors.xcassets */; };
+		860FC720251B001000D7446E /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860FC71F251B001000D7446E /* UIColor+Extension.swift */; };
 		D5EEB6D39571E9B531645568 /* Pods_ChuckNorrisFacts_ChuckNorrisFactsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6260C62420527B0E7203BB02 /* Pods_ChuckNorrisFacts_ChuckNorrisFactsUITests.framework */; };
 		F360549C82564745D2224AAA /* Pods_ChuckNorrisFactsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C8ABA44402AD08096A52A54 /* Pods_ChuckNorrisFactsTests.framework */; };
 /* End PBXBuildFile section */
@@ -65,6 +67,8 @@
 		860FC718251AFBC200D7446E /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		860FC71A251AFBC600D7446E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/AccessibilityLabelLocalizable.strings; sourceTree = "<group>"; };
 		860FC71C251AFBC900D7446E /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/AccessibilityLabelLocalizable.strings"; sourceTree = "<group>"; };
+		860FC71D251AFFBF00D7446E /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		860FC71F251B001000D7446E /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		8B3D683791F36A6F1BDD6CAE /* Pods-ChuckNorrisFacts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChuckNorrisFacts.debug.xcconfig"; path = "Target Support Files/Pods-ChuckNorrisFacts/Pods-ChuckNorrisFacts.debug.xcconfig"; sourceTree = "<group>"; };
 		8C8ABA44402AD08096A52A54 /* Pods_ChuckNorrisFactsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChuckNorrisFactsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C989DBF3D7814C08722CACE4 /* Pods-ChuckNorrisFactsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChuckNorrisFactsTests.release.xcconfig"; path = "Target Support Files/Pods-ChuckNorrisFactsTests/Pods-ChuckNorrisFactsTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -199,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				860FC699251AF48700D7446E /* Assets.xcassets */,
+				860FC71D251AFFBF00D7446E /* Colors.xcassets */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -229,6 +234,7 @@
 		860FC70C251AF9D100D7446E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				860FC71F251B001000D7446E /* UIColor+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -379,6 +385,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				860FC71E251AFFBF00D7446E /* Colors.xcassets in Resources */,
 				860FC69D251AF48700D7446E /* LaunchScreen.storyboard in Resources */,
 				860FC715251AFBBF00D7446E /* Localizable.strings in Resources */,
 				860FC69A251AF48700D7446E /* Assets.xcassets in Resources */,
@@ -497,6 +504,7 @@
 				860FC692251AF48600D7446E /* ViewController.swift in Sources */,
 				860FC698251AF48600D7446E /* ChuckNorrisFacts.xcdatamodeld in Sources */,
 				860FC711251AFB0F00D7446E /* AppCoordinator.swift in Sources */,
+				860FC720251B001000D7446E /* UIColor+Extension.swift in Sources */,
 				860FC68E251AF48600D7446E /* AppDelegate.swift in Sources */,
 				860FC690251AF48600D7446E /* SceneDelegate.swift in Sources */,
 			);
