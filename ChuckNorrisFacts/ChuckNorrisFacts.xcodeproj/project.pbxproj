@@ -11,12 +11,14 @@
 		860FC68E251AF48600D7446E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860FC68D251AF48600D7446E /* AppDelegate.swift */; };
 		860FC690251AF48600D7446E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860FC68F251AF48600D7446E /* SceneDelegate.swift */; };
 		860FC692251AF48600D7446E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860FC691251AF48600D7446E /* ViewController.swift */; };
-		860FC695251AF48600D7446E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 860FC693251AF48600D7446E /* Main.storyboard */; };
 		860FC698251AF48600D7446E /* ChuckNorrisFacts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 860FC696251AF48600D7446E /* ChuckNorrisFacts.xcdatamodeld */; };
 		860FC69A251AF48700D7446E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 860FC699251AF48700D7446E /* Assets.xcassets */; };
 		860FC69D251AF48700D7446E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 860FC69B251AF48700D7446E /* LaunchScreen.storyboard */; };
 		860FC6A8251AF48700D7446E /* ChuckNorrisFactsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860FC6A7251AF48700D7446E /* ChuckNorrisFactsTests.swift */; };
 		860FC6B3251AF48700D7446E /* ChuckNorrisFactsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860FC6B2251AF48700D7446E /* ChuckNorrisFactsUITests.swift */; };
+		860FC711251AFB0F00D7446E /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860FC710251AFB0F00D7446E /* AppCoordinator.swift */; };
+		860FC715251AFBBF00D7446E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 860FC717251AFBBF00D7446E /* Localizable.strings */; };
+		860FC719251AFBC600D7446E /* AccessibilityLabelLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 860FC71B251AFBC600D7446E /* AccessibilityLabelLocalizable.strings */; };
 		D5EEB6D39571E9B531645568 /* Pods_ChuckNorrisFacts_ChuckNorrisFactsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6260C62420527B0E7203BB02 /* Pods_ChuckNorrisFacts_ChuckNorrisFactsUITests.framework */; };
 		F360549C82564745D2224AAA /* Pods_ChuckNorrisFactsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C8ABA44402AD08096A52A54 /* Pods_ChuckNorrisFactsTests.framework */; };
 /* End PBXBuildFile section */
@@ -42,11 +44,10 @@
 		298A84BADE3D85334B1CC32A /* Pods_ChuckNorrisFacts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChuckNorrisFacts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CE2BF450982869ADE3A3170 /* Pods-ChuckNorrisFacts-ChuckNorrisFactsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChuckNorrisFacts-ChuckNorrisFactsUITests.debug.xcconfig"; path = "Target Support Files/Pods-ChuckNorrisFacts-ChuckNorrisFactsUITests/Pods-ChuckNorrisFacts-ChuckNorrisFactsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6260C62420527B0E7203BB02 /* Pods_ChuckNorrisFacts_ChuckNorrisFactsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChuckNorrisFacts_ChuckNorrisFactsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		860FC68A251AF48600D7446E /* ChuckNorrisFacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChuckNorrisFacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		860FC68A251AF48600D7446E /* Chuck Norris Facts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chuck Norris Facts.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		860FC68D251AF48600D7446E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		860FC68F251AF48600D7446E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		860FC691251AF48600D7446E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		860FC694251AF48600D7446E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		860FC697251AF48600D7446E /* ChuckNorrisFacts.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ChuckNorrisFacts.xcdatamodel; sourceTree = "<group>"; };
 		860FC699251AF48700D7446E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		860FC69C251AF48700D7446E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,6 +58,13 @@
 		860FC6AE251AF48700D7446E /* ChuckNorrisFactsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChuckNorrisFactsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		860FC6B2251AF48700D7446E /* ChuckNorrisFactsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChuckNorrisFactsUITests.swift; sourceTree = "<group>"; };
 		860FC6B4251AF48700D7446E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		860FC710251AFB0F00D7446E /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		860FC712251AFBA500D7446E /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		860FC714251AFBB000D7446E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		860FC716251AFBBF00D7446E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		860FC718251AFBC200D7446E /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		860FC71A251AFBC600D7446E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/AccessibilityLabelLocalizable.strings; sourceTree = "<group>"; };
+		860FC71C251AFBC900D7446E /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/AccessibilityLabelLocalizable.strings"; sourceTree = "<group>"; };
 		8B3D683791F36A6F1BDD6CAE /* Pods-ChuckNorrisFacts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChuckNorrisFacts.debug.xcconfig"; path = "Target Support Files/Pods-ChuckNorrisFacts/Pods-ChuckNorrisFacts.debug.xcconfig"; sourceTree = "<group>"; };
 		8C8ABA44402AD08096A52A54 /* Pods_ChuckNorrisFactsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChuckNorrisFactsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C989DBF3D7814C08722CACE4 /* Pods-ChuckNorrisFactsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChuckNorrisFactsTests.release.xcconfig"; path = "Target Support Files/Pods-ChuckNorrisFactsTests/Pods-ChuckNorrisFactsTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -118,7 +126,7 @@
 		860FC68B251AF48600D7446E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				860FC68A251AF48600D7446E /* ChuckNorrisFacts.app */,
+				860FC68A251AF48600D7446E /* Chuck Norris Facts.app */,
 				860FC6A3251AF48700D7446E /* ChuckNorrisFactsTests.xctest */,
 				860FC6AE251AF48700D7446E /* ChuckNorrisFactsUITests.xctest */,
 			);
@@ -128,14 +136,13 @@
 		860FC68C251AF48600D7446E /* ChuckNorrisFacts */ = {
 			isa = PBXGroup;
 			children = (
-				860FC68D251AF48600D7446E /* AppDelegate.swift */,
-				860FC68F251AF48600D7446E /* SceneDelegate.swift */,
-				860FC691251AF48600D7446E /* ViewController.swift */,
-				860FC693251AF48600D7446E /* Main.storyboard */,
-				860FC699251AF48700D7446E /* Assets.xcassets */,
-				860FC69B251AF48700D7446E /* LaunchScreen.storyboard */,
-				860FC69E251AF48700D7446E /* Info.plist */,
-				860FC696251AF48600D7446E /* ChuckNorrisFacts.xcdatamodeld */,
+				860FC709251AF9B400D7446E /* Coordinator */,
+				860FC700251AF91000D7446E /* Bootstrap */,
+				860FC701251AF92E00D7446E /* Supporting Files */,
+				860FC70F251AFAFB00D7446E /* Coordinator */,
+				860FC707251AF99C00D7446E /* Common */,
+				860FC70A251AF9B900D7446E /* Repositories */,
+				860FC70E251AF9ED00D7446E /* Features */,
 			);
 			path = ChuckNorrisFacts;
 			sourceTree = "<group>";
@@ -156,6 +163,98 @@
 				860FC6B4251AF48700D7446E /* Info.plist */,
 			);
 			path = ChuckNorrisFactsUITests;
+			sourceTree = "<group>";
+		};
+		860FC700251AF91000D7446E /* Bootstrap */ = {
+			isa = PBXGroup;
+			children = (
+				860FC68D251AF48600D7446E /* AppDelegate.swift */,
+				860FC68F251AF48600D7446E /* SceneDelegate.swift */,
+				860FC69B251AF48700D7446E /* LaunchScreen.storyboard */,
+			);
+			path = Bootstrap;
+			sourceTree = "<group>";
+		};
+		860FC701251AF92E00D7446E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				860FC69E251AF48700D7446E /* Info.plist */,
+				860FC717251AFBBF00D7446E /* Localizable.strings */,
+				860FC71B251AFBC600D7446E /* AccessibilityLabelLocalizable.strings */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		860FC707251AF99C00D7446E /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				860FC70D251AF9DD00D7446E /* Constants */,
+				860FC708251AF9A400D7446E /* Assets */,
+				860FC70C251AF9D100D7446E /* Extensions */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		860FC708251AF9A400D7446E /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				860FC699251AF48700D7446E /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		860FC709251AF9B400D7446E /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		860FC70A251AF9B900D7446E /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				860FC70B251AF9BF00D7446E /* Data */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		860FC70B251AF9BF00D7446E /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				860FC696251AF48600D7446E /* ChuckNorrisFacts.xcdatamodeld */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		860FC70C251AF9D100D7446E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		860FC70D251AF9DD00D7446E /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		860FC70E251AF9ED00D7446E /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				860FC691251AF48600D7446E /* ViewController.swift */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		860FC70F251AFAFB00D7446E /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				860FC710251AFB0F00D7446E /* AppCoordinator.swift */,
+			);
+			name = Coordinator;
+			path = "Supporting Files/Coordinator";
 			sourceTree = "<group>";
 		};
 		F3B564B8017EFD1436F4A30D /* Pods */ = {
@@ -190,7 +289,7 @@
 			);
 			name = ChuckNorrisFacts;
 			productName = ChuckNorrisFacts;
-			productReference = 860FC68A251AF48600D7446E /* ChuckNorrisFacts.app */;
+			productReference = 860FC68A251AF48600D7446E /* Chuck Norris Facts.app */;
 			productType = "com.apple.product-type.application";
 		};
 		860FC6A2251AF48700D7446E /* ChuckNorrisFactsTests */ = {
@@ -261,6 +360,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = 860FC681251AF48600D7446E;
 			productRefGroup = 860FC68B251AF48600D7446E /* Products */;
@@ -280,8 +380,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				860FC69D251AF48700D7446E /* LaunchScreen.storyboard in Resources */,
+				860FC715251AFBBF00D7446E /* Localizable.strings in Resources */,
 				860FC69A251AF48700D7446E /* Assets.xcassets in Resources */,
-				860FC695251AF48600D7446E /* Main.storyboard in Resources */,
+				860FC719251AFBC600D7446E /* AccessibilityLabelLocalizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,6 +496,7 @@
 			files = (
 				860FC692251AF48600D7446E /* ViewController.swift in Sources */,
 				860FC698251AF48600D7446E /* ChuckNorrisFacts.xcdatamodeld in Sources */,
+				860FC711251AFB0F00D7446E /* AppCoordinator.swift in Sources */,
 				860FC68E251AF48600D7446E /* AppDelegate.swift in Sources */,
 				860FC690251AF48600D7446E /* SceneDelegate.swift in Sources */,
 			);
@@ -432,20 +534,32 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		860FC693251AF48600D7446E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				860FC694251AF48600D7446E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		860FC69B251AF48700D7446E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				860FC69C251AF48700D7446E /* Base */,
+				860FC712251AFBA500D7446E /* pt-BR */,
+				860FC714251AFBB000D7446E /* en */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		860FC717251AFBBF00D7446E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				860FC716251AFBBF00D7446E /* en */,
+				860FC718251AFBC200D7446E /* pt-BR */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		860FC71B251AFBC600D7446E /* AccessibilityLabelLocalizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				860FC71A251AFBC600D7446E /* en */,
+				860FC71C251AFBC900D7446E /* pt-BR */,
+			);
+			name = AccessibilityLabelLocalizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -455,6 +569,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -501,7 +616,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -515,6 +630,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -555,7 +671,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -572,15 +688,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZUDACG4ZT4;
-				INFOPLIST_FILE = ChuckNorrisFacts/Info.plist;
+				INFOPLIST_FILE = "ChuckNorrisFacts/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.GabrielRozendo.ChuckNorrisFacts;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Chuck Norris Facts";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -591,15 +708,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZUDACG4ZT4;
-				INFOPLIST_FILE = ChuckNorrisFacts/Info.plist;
+				INFOPLIST_FILE = "ChuckNorrisFacts/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.GabrielRozendo.ChuckNorrisFacts;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Chuck Norris Facts";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
