@@ -23,6 +23,7 @@
 		860FC720251B001000D7446E /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860FC71F251B001000D7446E /* UIColor+Extension.swift */; };
 		860FC724251B009A00D7446E /* courier-new.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 860FC722251B009A00D7446E /* courier-new.ttf */; };
 		860FC725251B009A00D7446E /* 04b_30.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 860FC723251B009A00D7446E /* 04b_30.ttf */; };
+		860FC728251B035A00D7446E /* Reachbility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860FC727251B035A00D7446E /* Reachbility.swift */; };
 		D5EEB6D39571E9B531645568 /* Pods_ChuckNorrisFacts_ChuckNorrisFactsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6260C62420527B0E7203BB02 /* Pods_ChuckNorrisFacts_ChuckNorrisFactsUITests.framework */; };
 		F360549C82564745D2224AAA /* Pods_ChuckNorrisFactsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C8ABA44402AD08096A52A54 /* Pods_ChuckNorrisFactsTests.framework */; };
 /* End PBXBuildFile section */
@@ -73,6 +74,7 @@
 		860FC71F251B001000D7446E /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		860FC722251B009A00D7446E /* courier-new.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "courier-new.ttf"; sourceTree = "<group>"; };
 		860FC723251B009A00D7446E /* 04b_30.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 04b_30.ttf; sourceTree = "<group>"; };
+		860FC727251B035A00D7446E /* Reachbility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachbility.swift; sourceTree = "<group>"; };
 		8B3D683791F36A6F1BDD6CAE /* Pods-ChuckNorrisFacts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChuckNorrisFacts.debug.xcconfig"; path = "Target Support Files/Pods-ChuckNorrisFacts/Pods-ChuckNorrisFacts.debug.xcconfig"; sourceTree = "<group>"; };
 		8C8ABA44402AD08096A52A54 /* Pods_ChuckNorrisFactsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChuckNorrisFactsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C989DBF3D7814C08722CACE4 /* Pods-ChuckNorrisFactsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChuckNorrisFactsTests.release.xcconfig"; path = "Target Support Files/Pods-ChuckNorrisFactsTests/Pods-ChuckNorrisFactsTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 		860FC70A251AF9B900D7446E /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				860FC726251B034A00D7446E /* Networking */,
 				860FC70B251AF9BF00D7446E /* Data */,
 			);
 			path = Repositories;
@@ -275,6 +278,14 @@
 				860FC722251B009A00D7446E /* courier-new.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		860FC726251B034A00D7446E /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				860FC727251B035A00D7446E /* Reachbility.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		F3B564B8017EFD1436F4A30D /* Pods */ = {
@@ -518,6 +529,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				860FC692251AF48600D7446E /* ViewController.swift in Sources */,
+				860FC728251B035A00D7446E /* Reachbility.swift in Sources */,
 				860FC698251AF48600D7446E /* ChuckNorrisFacts.xcdatamodeld in Sources */,
 				860FC711251AFB0F00D7446E /* AppCoordinator.swift in Sources */,
 				860FC720251B001000D7446E /* UIColor+Extension.swift in Sources */,
