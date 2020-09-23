@@ -14,7 +14,6 @@
 		860FC698251AF48600D7446E /* ChuckNorrisFacts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 860FC696251AF48600D7446E /* ChuckNorrisFacts.xcdatamodeld */; };
 		860FC69A251AF48700D7446E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 860FC699251AF48700D7446E /* Assets.xcassets */; };
 		860FC69D251AF48700D7446E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 860FC69B251AF48700D7446E /* LaunchScreen.storyboard */; };
-		860FC6A8251AF48700D7446E /* ChuckNorrisFactsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860FC6A7251AF48700D7446E /* ChuckNorrisFactsTests.swift */; };
 		860FC6B3251AF48700D7446E /* ChuckNorrisFactsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860FC6B2251AF48700D7446E /* ChuckNorrisFactsUITests.swift */; };
 		860FC711251AFB0F00D7446E /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860FC710251AFB0F00D7446E /* AppCoordinator.swift */; };
 		860FC715251AFBBF00D7446E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 860FC717251AFBBF00D7446E /* Localizable.strings */; };
@@ -23,6 +22,17 @@
 		860FC720251B001000D7446E /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860FC71F251B001000D7446E /* UIColor+Extension.swift */; };
 		860FC724251B009A00D7446E /* courier-new.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 860FC722251B009A00D7446E /* courier-new.ttf */; };
 		860FC725251B009A00D7446E /* 04b_30.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 860FC723251B009A00D7446E /* 04b_30.ttf */; };
+		860FC728251B035A00D7446E /* Reachbility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860FC727251B035A00D7446E /* Reachbility.swift */; };
+		860FC72A251B03A600D7446E /* NetworkUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860FC729251B03A600D7446E /* NetworkUtils.swift */; };
+		860FC72C251B03CF00D7446E /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860FC72B251B03CF00D7446E /* NetworkError.swift */; };
+		860FC72E251B03FD00D7446E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860FC72D251B03FD00D7446E /* NetworkManager.swift */; };
+		860FC730251B043400D7446E /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860FC72F251B043400D7446E /* Request.swift */; };
+		860FC734251B046400D7446E /* NetworkSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860FC733251B046400D7446E /* NetworkSpec.swift */; };
+		860FC736251B063000D7446E /* RequestParamsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860FC735251B063000D7446E /* RequestParamsSpec.swift */; };
+		860FC73B251B068400D7446E /* ReachbilityMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860FC73A251B068400D7446E /* ReachbilityMock.swift */; };
+		860FC73D251B069F00D7446E /* RequestMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860FC73C251B069F00D7446E /* RequestMock.swift */; };
+		860FC73F251B071400D7446E /* RequestHeaderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860FC73E251B071400D7446E /* RequestHeaderSpec.swift */; };
+		860FC741251B07AA00D7446E /* RequestSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860FC740251B07AA00D7446E /* RequestSpec.swift */; };
 		D5EEB6D39571E9B531645568 /* Pods_ChuckNorrisFacts_ChuckNorrisFactsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6260C62420527B0E7203BB02 /* Pods_ChuckNorrisFacts_ChuckNorrisFactsUITests.framework */; };
 		F360549C82564745D2224AAA /* Pods_ChuckNorrisFactsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C8ABA44402AD08096A52A54 /* Pods_ChuckNorrisFactsTests.framework */; };
 /* End PBXBuildFile section */
@@ -57,7 +67,6 @@
 		860FC69C251AF48700D7446E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		860FC69E251AF48700D7446E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		860FC6A3251AF48700D7446E /* ChuckNorrisFactsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChuckNorrisFactsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		860FC6A7251AF48700D7446E /* ChuckNorrisFactsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChuckNorrisFactsTests.swift; sourceTree = "<group>"; };
 		860FC6A9251AF48700D7446E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		860FC6AE251AF48700D7446E /* ChuckNorrisFactsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChuckNorrisFactsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		860FC6B2251AF48700D7446E /* ChuckNorrisFactsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChuckNorrisFactsUITests.swift; sourceTree = "<group>"; };
@@ -73,6 +82,17 @@
 		860FC71F251B001000D7446E /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		860FC722251B009A00D7446E /* courier-new.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "courier-new.ttf"; sourceTree = "<group>"; };
 		860FC723251B009A00D7446E /* 04b_30.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 04b_30.ttf; sourceTree = "<group>"; };
+		860FC727251B035A00D7446E /* Reachbility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachbility.swift; sourceTree = "<group>"; };
+		860FC729251B03A600D7446E /* NetworkUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUtils.swift; sourceTree = "<group>"; };
+		860FC72B251B03CF00D7446E /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		860FC72D251B03FD00D7446E /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		860FC72F251B043400D7446E /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		860FC733251B046400D7446E /* NetworkSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSpec.swift; sourceTree = "<group>"; };
+		860FC735251B063000D7446E /* RequestParamsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestParamsSpec.swift; sourceTree = "<group>"; };
+		860FC73A251B068400D7446E /* ReachbilityMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachbilityMock.swift; sourceTree = "<group>"; };
+		860FC73C251B069F00D7446E /* RequestMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMock.swift; sourceTree = "<group>"; };
+		860FC73E251B071400D7446E /* RequestHeaderSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHeaderSpec.swift; sourceTree = "<group>"; };
+		860FC740251B07AA00D7446E /* RequestSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestSpec.swift; sourceTree = "<group>"; };
 		8B3D683791F36A6F1BDD6CAE /* Pods-ChuckNorrisFacts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChuckNorrisFacts.debug.xcconfig"; path = "Target Support Files/Pods-ChuckNorrisFacts/Pods-ChuckNorrisFacts.debug.xcconfig"; sourceTree = "<group>"; };
 		8C8ABA44402AD08096A52A54 /* Pods_ChuckNorrisFactsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChuckNorrisFactsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C989DBF3D7814C08722CACE4 /* Pods-ChuckNorrisFactsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChuckNorrisFactsTests.release.xcconfig"; path = "Target Support Files/Pods-ChuckNorrisFactsTests/Pods-ChuckNorrisFactsTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -144,6 +164,7 @@
 		860FC68C251AF48600D7446E /* ChuckNorrisFacts */ = {
 			isa = PBXGroup;
 			children = (
+				860FC737251B064D00D7446E /* Mock */,
 				860FC709251AF9B400D7446E /* Coordinator */,
 				860FC700251AF91000D7446E /* Bootstrap */,
 				860FC701251AF92E00D7446E /* Supporting Files */,
@@ -158,7 +179,7 @@
 		860FC6A6251AF48700D7446E /* ChuckNorrisFactsTests */ = {
 			isa = PBXGroup;
 			children = (
-				860FC6A7251AF48700D7446E /* ChuckNorrisFactsTests.swift */,
+				860FC731251B045000D7446E /* Repositories */,
 				860FC6A9251AF48700D7446E /* Info.plist */,
 			);
 			path = ChuckNorrisFactsTests;
@@ -223,6 +244,7 @@
 		860FC70A251AF9B900D7446E /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				860FC726251B034A00D7446E /* Networking */,
 				860FC70B251AF9BF00D7446E /* Data */,
 			);
 			path = Repositories;
@@ -275,6 +297,62 @@
 				860FC722251B009A00D7446E /* courier-new.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		860FC726251B034A00D7446E /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				860FC727251B035A00D7446E /* Reachbility.swift */,
+				860FC72B251B03CF00D7446E /* NetworkError.swift */,
+				860FC729251B03A600D7446E /* NetworkUtils.swift */,
+				860FC72D251B03FD00D7446E /* NetworkManager.swift */,
+				860FC72F251B043400D7446E /* Request.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		860FC731251B045000D7446E /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				860FC732251B045700D7446E /* Networking */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		860FC732251B045700D7446E /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				860FC733251B046400D7446E /* NetworkSpec.swift */,
+				860FC740251B07AA00D7446E /* RequestSpec.swift */,
+				860FC735251B063000D7446E /* RequestParamsSpec.swift */,
+				860FC73E251B071400D7446E /* RequestHeaderSpec.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		860FC737251B064D00D7446E /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				860FC738251B066400D7446E /* Repositories */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		860FC738251B066400D7446E /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				860FC739251B067000D7446E /* Networking */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		860FC739251B067000D7446E /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				860FC73A251B068400D7446E /* ReachbilityMock.swift */,
+				860FC73C251B069F00D7446E /* RequestMock.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		F3B564B8017EFD1436F4A30D /* Pods */ = {
@@ -517,10 +595,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				860FC72A251B03A600D7446E /* NetworkUtils.swift in Sources */,
 				860FC692251AF48600D7446E /* ViewController.swift in Sources */,
+				860FC72E251B03FD00D7446E /* NetworkManager.swift in Sources */,
+				860FC728251B035A00D7446E /* Reachbility.swift in Sources */,
+				860FC730251B043400D7446E /* Request.swift in Sources */,
+				860FC73D251B069F00D7446E /* RequestMock.swift in Sources */,
 				860FC698251AF48600D7446E /* ChuckNorrisFacts.xcdatamodeld in Sources */,
+				860FC73B251B068400D7446E /* ReachbilityMock.swift in Sources */,
 				860FC711251AFB0F00D7446E /* AppCoordinator.swift in Sources */,
 				860FC720251B001000D7446E /* UIColor+Extension.swift in Sources */,
+				860FC72C251B03CF00D7446E /* NetworkError.swift in Sources */,
 				860FC68E251AF48600D7446E /* AppDelegate.swift in Sources */,
 				860FC690251AF48600D7446E /* SceneDelegate.swift in Sources */,
 			);
@@ -530,7 +615,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				860FC6A8251AF48700D7446E /* ChuckNorrisFactsTests.swift in Sources */,
+				860FC741251B07AA00D7446E /* RequestSpec.swift in Sources */,
+				860FC736251B063000D7446E /* RequestParamsSpec.swift in Sources */,
+				860FC734251B046400D7446E /* NetworkSpec.swift in Sources */,
+				860FC73F251B071400D7446E /* RequestHeaderSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -766,7 +854,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChuckNorrisFacts.app/ChuckNorrisFacts";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chuck Norris Facts.app/Chuck Norris Facts";
 			};
 			name = Debug;
 		};
@@ -789,7 +877,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChuckNorrisFacts.app/ChuckNorrisFacts";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chuck Norris Facts.app/Chuck Norris Facts";
 			};
 			name = Release;
 		};
