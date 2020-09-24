@@ -2,6 +2,15 @@
 
 [![Build Status](https://app.bitrise.io/app/393cf6c71a71d8ae/status.svg?token=1IqoCnYbN7EHmByZJg0Rgw&branch=main)](https://app.bitrise.io/app/393cf6c71a71d8ae)
 
+![Top Language](https://img.shields.io/github/languages/top/GabrielRozendo/ChuckNorris_challenge_iOS)
+![Repository size](https://img.shields.io/github/repo-size/GabrielRozendo/ChuckNorris_challenge_iOS)
+![Issues](https://img.shields.io/github/issues/GabrielRozendo/ChuckNorris_challenge_iOS)
+![PR](https://img.shields.io/github/issues-pr/GabrielRozendo/ChuckNorris_challenge_iOS)
+![Code Review welcome](https://img.shields.io/badge/code_review-welcome-blue)
+![Last commit](https://img.shields.io/github/last-commit/GabrielRozendo/ChuckNorris_challenge_iOS)
+[![Maintained](https://img.shields.io/maintenance/yes/2020)](https://GitHub.com/GabrielRozendo/ChuckNorris_challenge_iOS/graphs/commit-activity)
+
+
 ## Mobile Engineer - Code challenge
 
 It is a tech challenge interview for Mobile Engineer as iOS or Android native.
