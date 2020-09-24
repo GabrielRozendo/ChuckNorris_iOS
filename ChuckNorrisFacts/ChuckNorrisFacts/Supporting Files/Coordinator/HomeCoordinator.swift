@@ -16,11 +16,16 @@ class HomeCoordinator {
     private var homeVC: HomeViewController?
     private var homeVM: HomeViewModel?
     private var searchCoordinator: SearchCoordinator?
+    private var factsRepository: FactsRepositoryProtocol
 
     // MARK: - INIT
 
-    init(presenter: UINavigationController, homeVM: HomeViewModel? = nil, homeVC: HomeViewController? = nil) {
+    init(presenter: UINavigationController,
+         repository: FactsRepositoryProtocol,
+         homeVM: HomeViewModel? = nil,
+         homeVC: HomeViewController? = nil) {
         self.presenter = presenter
+        self.factsRepository = repository
         self.homeVM = homeVM
         self.homeVC = homeVC
     }
@@ -47,7 +52,7 @@ class HomeCoordinator {
 
 extension HomeCoordinator: Coordinator {
     func start() {
-        let homeVM = self.homeVM ?? HomeViewModel()
+        let homeVM = self.homeVM ?? HomeViewModel(repository: factsRepository)
         self.homeVM = homeVM
         let homeVC = self.homeVC ?? HomeViewController(with: homeVM)
         homeVC.delegate = self

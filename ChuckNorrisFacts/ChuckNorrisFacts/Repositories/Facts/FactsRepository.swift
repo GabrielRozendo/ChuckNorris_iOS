@@ -13,6 +13,14 @@ import RxSwift
 
 protocol FactsRepositoryProtocol {
     var isReady: BehaviorSubject<Bool> { get }
+
+    func goToSearch(with term: String,
+                    success: @escaping FactsSearchHandler,
+                    failure: @escaping FactsErrorHandler) -> URLSessionDataTask?
+
+    func goToCategory(with category: FactCategory?,
+                      success: @escaping FactsRandomHandler,
+                      failure: @escaping FactsErrorHandler) -> URLSessionDataTask?
 }
 
 // MARK: - CLASS
@@ -35,4 +43,28 @@ class FactsRepository {
 
 // MARK: - EXTENSIONS
 
-extension FactsRepository: FactsRepositoryProtocol {}
+extension FactsRepository: FactsRepositoryProtocol {
+    func goToSearch(with term: String,
+                    success: @escaping FactsSearchHandler,
+                    failure: @escaping FactsErrorHandler) -> URLSessionDataTask? {
+        return service.search(with: term,
+                              success: { searchResult in
+                                  success(searchResult)
+                              },
+                              failure: { error in
+                                  failure(error)
+                              })
+    }
+
+    func goToCategory(with category: FactCategory?,
+                      success: @escaping FactsRandomHandler,
+                      failure: @escaping FactsErrorHandler) -> URLSessionDataTask? {
+        return service.random(with: category,
+                              success: { fact in
+                                  success(fact)
+                              },
+                              failure: { error in
+                                  failure(error)
+                              })
+    }
+}

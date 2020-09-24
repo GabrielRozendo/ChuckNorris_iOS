@@ -31,10 +31,14 @@ class SearchCoordinator {
 
     // MARK: - INIT
 
-    init(presenter: UINavigationController, categories: [FactCategory], pastSearches: [PastSearch]) {
+    init(presenter: UINavigationController,
+         categories: [FactCategory],
+         pastSearches: [PastSearch],
+         searchVC: SearchViewController? = nil) {
         self.presenter = presenter
         self.categories = categories
         self.pastSearches = pastSearches
+        self.searchVC = searchVC
     }
 
     // MARK: - PRIVATE METHODS

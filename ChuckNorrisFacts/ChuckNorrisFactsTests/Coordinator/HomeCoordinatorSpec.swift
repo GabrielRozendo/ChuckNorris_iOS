@@ -18,7 +18,8 @@ class HomeCoordinatorSpec: QuickSpec {
 
             beforeEach {
                 presenter = UINavigationController()
-                coordinator = HomeCoordinator(presenter: presenter)
+                let repository = FactsRepositoryMock()
+                coordinator = HomeCoordinator(presenter: presenter, repository: repository)
                 coordinator.start()
             }
 
