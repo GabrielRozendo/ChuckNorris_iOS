@@ -14,6 +14,7 @@ import RxSwift
 protocol FactsRepositoryProtocol {
     var isReady: BehaviorSubject<Bool> { get }
     var categories: [FactCategory] { get }
+    var pastSearchesSorted: [PastSearch] { get }
 
     func goToSearch(with term: String,
                     success: @escaping FactsSearchHandler,
@@ -35,11 +36,17 @@ class FactsRepository {
         didSet { isReady.onNext(true) }
     }
 
+    private var pastSearches = Set<PastSearch>()
+
     // MARK: - PUBLIC PROPERTIES
 
     let isReady = BehaviorSubject<Bool>(value: false)
     var categories: [FactCategory] {
         return Array(categoriesSet)
+    }
+
+    var pastSearchesSorted: [PastSearch] {
+        return pastSearches.sorted(by: { $0.date > $1.date })
     }
 
     // MARK: - INIT
@@ -49,6 +56,7 @@ class FactsRepository {
         self.service = service
 
         loadCategories()
+        loadPastSearches()
     }
 
     // MARK: - PRIVATE METHODS
@@ -68,6 +76,13 @@ class FactsRepository {
             debugPrint("fetch categories error: \(error)")
         })
     }
+
+    private func loadPastSearches() {
+        let pastArray = dataManager.getPastSearch()?.sorted(by: { $0 > $1 }) ?? []
+        pastSearches = Set(pastArray)
+
+        debugPrint("pastSearches: \(pastSearches.count)")
+    }
 }
 
 // MARK: - EXTENSIONS
@@ -77,7 +92,19 @@ extension FactsRepository: FactsRepositoryProtocol {
                     success: @escaping FactsSearchHandler,
                     failure: @escaping FactsErrorHandler) -> URLSessionDataTask? {
         return service.search(with: term,
-                              success: { searchResult in
+                              success: { [weak self] searchResult in
+                                  guard let self = self else { return }
+
+                                  let pastSearch = PastSearch(term: term, searchResult: searchResult)
+
+                                  if let existent = self.pastSearches.first(where: { $0.term == term }) {
+                                      existent.date = Date()
+                                  } else {
+                                      self.pastSearches.insert(pastSearch)
+                                  }
+
+                                  self.dataManager.savePastSearch(with: pastSearch)
+
                                   success(searchResult)
                               },
                               failure: { error in

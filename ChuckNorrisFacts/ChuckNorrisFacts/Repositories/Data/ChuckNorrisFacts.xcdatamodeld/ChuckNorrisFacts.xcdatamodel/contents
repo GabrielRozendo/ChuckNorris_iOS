@@ -3,7 +3,12 @@
     <entity name="CategoriesEntity" representedClassName="CategoriesEntity" syncable="YES" codeGenerationType="class">
         <attribute name="name" optional="YES" attributeType="String"/>
     </entity>
+    <entity name="PastSearchesEntity" representedClassName="PastSearchesEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="term" optional="YES" attributeType="String"/>
+    </entity>
     <elements>
         <element name="CategoriesEntity" positionX="-63" positionY="-18" width="128" height="58"/>
+        <element name="PastSearchesEntity" positionX="-54" positionY="0" width="128" height="73"/>
     </elements>
 </model>
