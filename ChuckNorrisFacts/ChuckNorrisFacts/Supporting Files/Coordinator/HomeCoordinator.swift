@@ -68,7 +68,9 @@ extension HomeCoordinator: Coordinator {
 
 extension HomeCoordinator: HomeViewControllerDelegate {
     func goToSearch() {
-        searchCoordinator = SearchCoordinator(presenter: presenter, categories: [], pastSearches: [])
+        searchCoordinator = SearchCoordinator(presenter: presenter,
+                                              categories: factsRepository.categories,
+                                              pastSearches: [])
         searchCoordinator?.delegate = self
         searchCoordinator?.start()
     }

@@ -78,7 +78,7 @@ class SearchViewController: UITableViewController {
     private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.allowsSelection = true
+        tableView.allowsSelection = false
         tableView.allowsMultipleSelection = false
         tableView.tableFooterView = UIView()
         tableView.tableHeaderView = searchController.searchBar
@@ -108,6 +108,7 @@ extension SearchViewController {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: CategoryCollectionHeader.reuseIdentifier)
                 as? CategoryCollectionHeader
             else { return UITableViewCell() }
+
             cell.categories = viewModel.categoriesToShow
             cell.delegate = self
             return cell

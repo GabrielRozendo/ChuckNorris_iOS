@@ -16,3 +16,22 @@ typealias FactCategory = String
 extension FactCategory {
     static var defaultCategory = "UNCATEGORIZED"
 }
+
+// MARK: - CORE DATA
+
+extension FactCategory {
+    enum CoreDataFields: String {
+        case name
+    }
+
+    func setValue(with object: NSManagedObject) {
+        object.setValue(self, forKey: CoreDataFields.name.rawValue)
+    }
+
+    static func factory(from object: NSManagedObject) -> FactCategory? {
+        guard let category = object.value(forKey: CoreDataFields.name.rawValue) as? String
+        else { return nil }
+
+        return category
+    }
+}

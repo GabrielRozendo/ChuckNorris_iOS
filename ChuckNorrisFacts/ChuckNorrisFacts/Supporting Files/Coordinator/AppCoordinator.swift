@@ -29,7 +29,8 @@ class AppCoordinator {
 
         let network = NetworkManager(reachability: Reachability.self)
         let service = FactsService(networkManager: network)
-        let repository = FactsRepository(service: service)
+        let dataManager = DataManager()
+        let repository = FactsRepository(service: service, dataManager: dataManager)
 
         homeCoordinator = HomeCoordinator(presenter: navigationController, repository: repository)
 

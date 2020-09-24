@@ -26,9 +26,12 @@ class NetworkManager {
 
     // MARK: - PRIVATE METHODS
 
-    private func handleStatusCode<T: Codable>(_ statusCode: Int, _ data: Data, _ completion: ResultCallback<T>) {
+    private func handleStatusCode<T: Codable>(_ statusCode: Int,
+                                              _ data: Data,
+                                              _ completion: ResultCallback<T>,
+                                              with decoder: JSONDecoder) {
         switch statusCode {
-        case 200 ..< 300: handleData(data, completion: completion)
+        case 200 ..< 300: handleData(data, completion: completion, with: decoder)
         case 400: completion(.failure(.invalidRequest))
         case 401: completion(.failure(.unauthorized))
         case 404: completion(.failure(.notFound))
@@ -37,9 +40,9 @@ class NetworkManager {
         }
     }
 
-    private func handleData<T: Codable>(_ data: Data, completion: ResultCallback<T>) {
+    private func handleData<T: Codable>(_ data: Data, completion: ResultCallback<T>, with decoder: JSONDecoder) {
         do {
-            let result = try JSONDecoder().decode(T.self, from: data)
+            let result = try decoder.decode(T.self, from: data)
             completion(.success(result))
         } catch let jsonError {
             debugPrint(jsonError)
@@ -92,7 +95,7 @@ extension NetworkManager: NetworkManagerProtocol {
 
             debugPrint(String(data: data, encoding: .utf8) ?? "no response")
 
-            self.handleStatusCode(response.statusCode, data, completion)
+            self.handleStatusCode(response.statusCode, data, completion, with: request.jsonDecoder)
         }
         dataTask.resume()
         return dataTask
