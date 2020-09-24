@@ -70,7 +70,7 @@ extension HomeCoordinator: HomeViewControllerDelegate {
     func goToSearch() {
         searchCoordinator = SearchCoordinator(presenter: presenter,
                                               categories: factsRepository.categories,
-                                              pastSearches: [])
+                                              pastSearches: factsRepository.pastSearchesSorted)
         searchCoordinator?.delegate = self
         searchCoordinator?.start()
     }
