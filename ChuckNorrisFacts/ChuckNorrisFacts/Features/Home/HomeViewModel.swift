@@ -31,6 +31,7 @@ class HomeViewModel {
 
     private let disposeBag = DisposeBag()
     private var currentTask: URLSessionDataTask?
+    private let factsRepository: FactsRepositoryProtocol
 
     // MARK: - PUBLIC PROPERTIES
 
@@ -46,16 +47,61 @@ class HomeViewModel {
     }
 
     private(set) var isDirty = false
+
+    // MARK: - INIT
+
+    init(repository: FactsRepositoryProtocol) {
+        self.factsRepository = repository
+    }
 }
 
 // MARK: - EXTENSION
 
 extension HomeViewModel: HomeViewModelProtocol {
     func didLoad() {
-        loadingObservable.onNext(false)
+        factsRepository.isReady.subscribe { event in
+            if event.element ?? false {
+                self.loadingObservable.onNext(false)
+            }
+        }.disposed(by: disposeBag)
     }
 
-    func goToSearch(with term: String) {}
+    func goToSearch(with term: String) {
+        loadingObservable.onNext(true)
+        facts = []
 
-    func goToCategory(with category: FactCategory?) {}
+        currentTask?.cancel()
+        currentTask = nil
+
+        currentTask = factsRepository.goToSearch(with: term,
+
+                                                 success: { [weak self] searchResult in
+                                                     self?.facts = searchResult.result
+                                                     self?.loadingObservable.onNext(false)
+                                                 },
+
+                                                 failure: { [weak self] error in
+                                                     self?.errorObservable.onNext(error)
+                                                     self?.loadingObservable.onNext(false)
+                                                 })
+    }
+
+    func goToCategory(with category: FactCategory?) {
+        facts = []
+
+        currentTask?.cancel()
+        currentTask = nil
+
+        currentTask = factsRepository.goToCategory(with: category,
+
+                                                   success: { [weak self] fact in
+                                                       self?.facts = [fact]
+                                                       self?.loadingObservable.onNext(false)
+                                                   },
+
+                                                   failure: { [weak self] error in
+                                                       self?.errorObservable.onNext(error)
+                                                       self?.loadingObservable.onNext(false)
+                                                   })
+    }
 }
