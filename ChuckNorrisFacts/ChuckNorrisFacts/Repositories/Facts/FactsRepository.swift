@@ -29,6 +29,7 @@ protocol FactsRepositoryProtocol {
 class FactsRepository {
     // MARK: - PRIVATE PROPERTIES
 
+    private let dataManager: DataManagerProtocol
     private let service: FactsServiceProtocol
     private var categoriesSet = Set<FactCategory>() {
         didSet { isReady.onNext(true) }
@@ -36,14 +37,15 @@ class FactsRepository {
 
     // MARK: - PUBLIC PROPERTIES
 
-    let isReady = BehaviorSubject<Bool>(value: true)
+    let isReady = BehaviorSubject<Bool>(value: false)
     var categories: [FactCategory] {
         return Array(categoriesSet)
     }
 
     // MARK: - INIT
 
-    init(service: FactsServiceProtocol) {
+    init(service: FactsServiceProtocol, dataManager: DataManagerProtocol) {
+        self.dataManager = dataManager
         self.service = service
 
         loadCategories()
@@ -52,9 +54,16 @@ class FactsRepository {
     // MARK: - PRIVATE METHODS
 
     private func loadCategories() {
+        if let categories = dataManager.getCategories(), !categories.isEmpty {
+            debugPrint("categories from data manager: \(categories.count)")
+            categoriesSet = Set(categories)
+            return
+        }
+
         _ = service.categories(success: { categories in
-            debugPrint("categories from api \(categories.count)")
+            debugPrint("categories from api: \(categories.count)")
             self.categoriesSet = Set(categories)
+            self.dataManager.saveCategories(with: self.categories)
         }, failure: { error in
             debugPrint("fetch categories error: \(error)")
         })
