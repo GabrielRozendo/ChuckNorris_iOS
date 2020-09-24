@@ -107,7 +107,6 @@ extension CategoryCollectionHeader: UICollectionViewDelegate,
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(indexPath.row)
         delegate?.categoryDidTap(with: categories[indexPath.row])
     }
 

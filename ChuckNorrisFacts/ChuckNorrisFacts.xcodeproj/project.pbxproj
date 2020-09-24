@@ -75,6 +75,7 @@
 		869C979A251C27E500F15E58 /* Decodable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869C9799251C27E500F15E58 /* Decodable+Extension.swift */; };
 		869C979E251C283900F15E58 /* FactSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869C979D251C283900F15E58 /* FactSpec.swift */; };
 		869C97A0251C28C800F15E58 /* SearchResultSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869C979F251C28C800F15E58 /* SearchResultSpec.swift */; };
+		869C97A2251C2A0100F15E58 /* CategorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869C97A1251C2A0100F15E58 /* CategorySpec.swift */; };
 		D5EEB6D39571E9B531645568 /* Pods_ChuckNorrisFacts_ChuckNorrisFactsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6260C62420527B0E7203BB02 /* Pods_ChuckNorrisFacts_ChuckNorrisFactsUITests.framework */; };
 		F360549C82564745D2224AAA /* Pods_ChuckNorrisFactsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C8ABA44402AD08096A52A54 /* Pods_ChuckNorrisFactsTests.framework */; };
 /* End PBXBuildFile section */
@@ -177,6 +178,7 @@
 		869C9799251C27E500F15E58 /* Decodable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decodable+Extension.swift"; sourceTree = "<group>"; };
 		869C979D251C283900F15E58 /* FactSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactSpec.swift; sourceTree = "<group>"; };
 		869C979F251C28C800F15E58 /* SearchResultSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultSpec.swift; sourceTree = "<group>"; };
+		869C97A1251C2A0100F15E58 /* CategorySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySpec.swift; sourceTree = "<group>"; };
 		8B3D683791F36A6F1BDD6CAE /* Pods-ChuckNorrisFacts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChuckNorrisFacts.debug.xcconfig"; path = "Target Support Files/Pods-ChuckNorrisFacts/Pods-ChuckNorrisFacts.debug.xcconfig"; sourceTree = "<group>"; };
 		8C8ABA44402AD08096A52A54 /* Pods_ChuckNorrisFactsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChuckNorrisFactsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C989DBF3D7814C08722CACE4 /* Pods-ChuckNorrisFactsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChuckNorrisFactsTests.release.xcconfig"; path = "Target Support Files/Pods-ChuckNorrisFactsTests/Pods-ChuckNorrisFactsTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -573,6 +575,7 @@
 			children = (
 				869C979D251C283900F15E58 /* FactSpec.swift */,
 				869C979F251C28C800F15E58 /* SearchResultSpec.swift */,
+				869C97A1251C2A0100F15E58 /* CategorySpec.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -877,6 +880,7 @@
 				869C9769251BEBD700F15E58 /* HomeViewControllerSpec.swift in Sources */,
 				860FC734251B046400D7446E /* NetworkSpec.swift in Sources */,
 				869C97A0251C28C800F15E58 /* SearchResultSpec.swift in Sources */,
+				869C97A2251C2A0100F15E58 /* CategorySpec.swift in Sources */,
 				869C979E251C283900F15E58 /* FactSpec.swift in Sources */,
 				869C9786251C0CEF00F15E58 /* SearchViewModelSpec.swift in Sources */,
 				869C9761251BEA5F00F15E58 /* HomeCoordinatorSpec.swift in Sources */,

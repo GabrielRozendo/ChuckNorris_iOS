@@ -13,6 +13,7 @@ import RxSwift
 
 protocol FactsRepositoryProtocol {
     var isReady: BehaviorSubject<Bool> { get }
+    var categories: [FactCategory] { get }
 
     func goToSearch(with term: String,
                     success: @escaping FactsSearchHandler,
@@ -29,15 +30,34 @@ class FactsRepository {
     // MARK: - PRIVATE PROPERTIES
 
     private let service: FactsServiceProtocol
+    private var categoriesSet = Set<FactCategory>() {
+        didSet { isReady.onNext(true) }
+    }
 
     // MARK: - PUBLIC PROPERTIES
 
     let isReady = BehaviorSubject<Bool>(value: true)
+    var categories: [FactCategory] {
+        return Array(categoriesSet)
+    }
 
     // MARK: - INIT
 
     init(service: FactsServiceProtocol) {
         self.service = service
+
+        loadCategories()
+    }
+
+    // MARK: - PRIVATE METHODS
+
+    private func loadCategories() {
+        _ = service.categories(success: { categories in
+            debugPrint("categories from api \(categories.count)")
+            self.categoriesSet = Set(categories)
+        }, failure: { error in
+            debugPrint("fetch categories error: \(error)")
+        })
     }
 }
 

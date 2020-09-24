@@ -87,6 +87,7 @@ extension HomeViewModel: HomeViewModelProtocol {
     }
 
     func goToCategory(with category: FactCategory?) {
+        loadingObservable.onNext(true)
         facts = []
 
         currentTask?.cancel()
