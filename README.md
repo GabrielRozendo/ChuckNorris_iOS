@@ -49,7 +49,7 @@ I've chose use the main original colors from [site's css style](https://api.chuc
 
 Here is the [result in coolors](https://coolors.co/222222-228dbb-f15a24-8c6239)
 
-Use the same approach to get the font 04b_30 in css and the [icon](https://api.chucknorris.io/img/favicon.ico)
+The same approach was used to get the font **04b_30** in css and the [icon](https://api.chucknorris.io/img/favicon.ico)
 
 ![Icon image](https://api.chucknorris.io/img/favicon.ico "Icon image")
 
