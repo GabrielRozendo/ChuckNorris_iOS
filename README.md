@@ -15,9 +15,10 @@
 
 It is a tech challenge interview for Mobile Engineer as iOS or Android native.
 
+The problem to solve is in [challenge.md](challenge/challenge.md)
+
 I'm also doing it in [Flutter](https://github.com/GabrielRozendo/ChuckNorris_Flutter) and I'll do it in Android (basic version) to learn Kotlin!
 
-The problem to solve is in [challenge.md](challenge/challenge.md)
 
 ### Summary
 
@@ -64,7 +65,7 @@ The same approach was used to get the font **04b_30** in css and the [icon](http
 
 ### Frameworks
 
-Use minimal external frameworks.
+Using minimal external frameworks.
 
 - [SwiftLint](https://github.com/realm/SwiftLint) - A tool to enforce Swift style and conventions
 - [RxSwift](https://github.com/ReactiveX/RxSwift) - This is a Swift version of Rx. -- As there is a requirement in the challenge to use Reactive programming, it is the best way to use it.
@@ -111,18 +112,23 @@ Check out the tasks in [Backlog](https://github.com/GabrielRozendo/ChuckNorris_c
 ## How to run
 
 **TL;DR**: run the command in root of repository
+
 ```make lets_go```
 
 There is a [makefile](https://en.wikipedia.org/wiki/Makefile) to help in preparation to open the project in the first time.
 
-**You must have Xcode installed**
+**You must have Xcode installed** I've been using 11.6
 
-It'll install:
-- [brew](https://github.com/Homebrew/brew)
-- cocoapods
-- swiftlint
+```make brew_install``` installs [brew](https://github.com/Homebrew/brew)
 
-After that (even if them are already installed) the command will run ```pod install``` and then open the project.
+```make cocoapods_install``` installs cocoapods
+
+```make swiftlint_install``` installs swiftlint
+
+```make setup``` installs everything above and install the dependencies (pod install)
+
+```make lets_go``` calls make setup and open the project after that. 
+
 
 So you can execute any command by hand for now:
 - BUILD (CMD+B)
