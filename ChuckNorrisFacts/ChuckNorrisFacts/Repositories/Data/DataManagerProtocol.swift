@@ -9,4 +9,7 @@
 protocol DataManagerProtocol {
     func saveCategories(with categories: [FactCategory])
     func getCategories() -> [FactCategory]?
+
+    func savePastSearch(with pastSearch: PastSearch)
+    func getPastSearch() -> [PastSearch]?
 }

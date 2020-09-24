@@ -13,6 +13,7 @@ class DataManager {
 
     internal enum Entities: String {
         case categories = "CategoriesEntity"
+        case pastSearches = "PastSearchesEntity"
     }
 
     // MARK: - CORE DATA
@@ -79,6 +80,48 @@ extension DataManager: DataManagerProtocol {
             guard let managedObjects = result as? [NSManagedObject] else { return nil }
             let categories = managedObjects.compactMap { FactCategory.factory(from: $0) }
             return categories.compactMap { $0 }
+        } catch {
+            debugPrint(error)
+            return nil
+        }
+    }
+
+    // MARK: - PAST SEARCHES METHODS
+
+    func getPastSearchObject(with term: String) -> NSManagedObject? {
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: Entities.pastSearches.rawValue)
+        fetchRequest.predicate = NSPredicate(format: "%s = %s", PastSearch.CoreDataFields.term.rawValue, term)
+
+        do {
+            let results = try context.fetch(fetchRequest)
+            return results.first
+        } catch {
+            debugPrint("error executing fetch request: \(error)")
+        }
+
+        return nil
+    }
+
+    func savePastSearch(with pastSearch: PastSearch) {
+        guard let pastSearchEntity = NSEntityDescription.entity(forEntityName: Entities.pastSearches.rawValue,
+                                                                in: context)
+        else { return }
+
+        let object = NSManagedObject(entity: pastSearchEntity, insertInto: context)
+        pastSearch.setValue(with: object)
+
+        saveContext()
+    }
+
+    func getPastSearch() -> [PastSearch]? {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: Entities.pastSearches.rawValue)
+
+        do {
+            let result = try context.fetch(fetchRequest)
+            guard let managedObjects = result as? [NSManagedObject] else { return nil }
+
+            let pastSearch = managedObjects.compactMap { PastSearch.factory(from: $0) }
+            return pastSearch.compactMap { $0 }
         } catch {
             debugPrint(error)
             return nil
