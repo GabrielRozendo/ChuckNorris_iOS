@@ -18,7 +18,8 @@ class HomeCoordinatorSpec: QuickSpec {
 
             beforeEach {
                 presenter = UINavigationController()
-                coordinator = HomeCoordinator(presenter: presenter)
+                let repository = FactsRepositoryMock()
+                coordinator = HomeCoordinator(presenter: presenter, repository: repository)
                 coordinator.start()
             }
 
@@ -55,6 +56,14 @@ class HomeCoordinatorSpec: QuickSpec {
 
                 it("should conform to HomeViewControllerDelegate") {
                     expect(coordinator).to(beAKindOf(HomeViewControllerDelegate.self))
+                }
+
+                it("should conform to SearchCoordinatorDelegate") {
+                    expect(coordinator).to(beAKindOf(SearchCoordinatorDelegate.self))
+                }
+
+                it("should not conform to SearchViewControllerDelegate") {
+                    expect(coordinator).toNot(beAKindOf(SearchViewControllerDelegate.self))
                 }
             }
         }

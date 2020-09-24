@@ -27,3 +27,27 @@ extension UIColor {
         return UIColor(named: "CoyoteBrown") ?? UIColor(displayP3Red: 0.549, green: 0.384, blue: 0.224, alpha: 100)
     }
 }
+
+// MARK: - UICOLOR UTILS
+
+extension UIColor {
+    func lighter(by percentage: CGFloat = 30.0) -> UIColor {
+        return self.adjust(by: abs(percentage))
+    }
+
+    func darker(by percentage: CGFloat = 30.0) -> UIColor {
+        return self.adjust(by: -1 * abs(percentage))
+    }
+
+    func adjust(by percentage: CGFloat = 30.0) -> UIColor {
+        var red: CGFloat = 0, green: CGFloat = 0, blue: CGFloat = 0, alpha: CGFloat = 0
+        if self.getRed(&red, green: &green, blue: &blue, alpha: &alpha) {
+            return UIColor(red: min(red + percentage/100, 1.0),
+                           green: min(green + percentage/100, 1.0),
+                           blue: min(blue + percentage/100, 1.0),
+                           alpha: alpha)
+        }
+
+        return self
+    }
+}

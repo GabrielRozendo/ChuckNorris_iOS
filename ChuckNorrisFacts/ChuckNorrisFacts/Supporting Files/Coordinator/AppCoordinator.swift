@@ -27,7 +27,11 @@ class AppCoordinator {
         self.window = window
         navigationController = UINavigationController()
 
-        homeCoordinator = HomeCoordinator(presenter: navigationController)
+        let network = NetworkManager(reachability: Reachability.self)
+        let service = FactsService(networkManager: network)
+        let repository = FactsRepository(service: service)
+
+        homeCoordinator = HomeCoordinator(presenter: navigationController, repository: repository)
 
         setupNavigationController()
         window.rootViewController = navigationController
